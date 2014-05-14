@@ -1,0 +1,72 @@
+%Inicializaci�n del documento [tama�o de letra, tama�o de papel]{clase de documento}
+\documentclass[11pt,letterpaper]{article}
+
+\input{Formato/paquetes.tex}
+\fvset{frame=single,framesep=1mm,fontfamily=courier,fontsize=\scriptsize,numbers=left,framerule=.3mm,numbersep=1mm,commandchars=\\\{\}}
+\definecolor{g}{rgb}{0,0.51,0}
+\definecolor{m}{rgb}{1,0,1}
+\input{Formato/Portadagrupo}
+\newcommand{\HRule}{\rule{\linewidth}{.4mm}}
+
+\lhead{\small\leftmark}
+\rhead{EL7024 - Proyecto}
+\cfoot{\thepage}
+%\numberwithin{figure}{section} %Hace que la primera figura de cada sección X sea X.1
+%\numberwithin{table}{section}
+\begin{document}
+\SetKwBlock{Initp}{Inicializaci\'on de Par\'ametros}{}
+\SetKwBlock{Initv}{Inicializaci\'on de Variables}{}
+\renewcommand{\tablename}{Tabla}
+%\renewcommand{\thealgorithmcf}{\roman{algorithm}}
+\renewcommand{\algorithmcfname}{Algoritmo}%
+\renewcommand{\thetable}{\arabic{section}.\arabic{table}}
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
+\renewcommand{\listtablename}{Índice de Tablas}
+\renewcommand{\listfigurename}{Índice de Figuras}
+
+\portada{Taller de Proyecto}{Interconexión de Datacenters\\ \ \\ \emph{Telecomunicaciones}}{Proyecto: Avance}{EL5003 - Taller de Proyecto}{Sergio Bunel}{Liberman, Sergio}{Peet, Thomas}{Rebolledo, Juan}{Sanhueza, Andrés}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagenumbering{roman}
+\lhead{\small\leftmark}
+
+\newpage
+\tableofcontents
+\newpage
+\lhead{\small ÍNDICE DE FIGURAS}
+\listoffigures
+\newpage
+%\lhead{\small ÍNDICE DE TABLAS}
+%\listoftables
+%\newpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\lhead{\small\leftmark}
+\input{Secciones/Introduccion}
+\newpage
+\input{Secciones/CaracterizacionRedActual}
+\newpage
+\input{Secciones/JustificacionProyecto}
+\newpage
+\input{Secciones/Propuesta}
+\newpage
+\input{Secciones/IngenieriaDetalle}
+\newpage
+\input{Secciones/EstimacionSLA}
+\newpage
+\input{Secciones/EvaluacionEconomica}
+\newpage
+\input{Secciones/PlanificacionProyecto}
+\newpage
+\input{Secciones/Conclusiones}
+%% Adding references page
+\newpage
+\input{Secciones/Referencias}
+%% Appendix
+%\newpage
+%\input{Secciones/anexo}
+
+
+
+
+\end{document}

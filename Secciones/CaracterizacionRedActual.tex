@@ -1,0 +1,17 @@
+\section{Caracterizaci\'on de la Red actual}\label{sec:caracterizacion}
+
+Para la caracterización y posterior planificación de la red futura, se consideran 3 factores claves en todas sus etapas:
+
+\begin{itemize}
+\item Delay Introducido
+\item Distancia
+\item Costos Monetarios
+\end{itemize}
+
+Para la Fibra Oscura: 
+
+Si el delay es considerado, se puede incluir cómo un costo adicional de distancia (sabiendo la relación entre cantidad de saltos y distancia), de tal forma que la minimización ocurra en torno a una sola variable.
+
+Una vez resueltos los costos en una sola variable (Saltos y Distancia), se procederá a minimizar la función costo usando el conocido algoritmo de Dijkstra. 
+
+Adicionalmente a este procedimiento, para el caso de posibles cortes simultáneos, ha de hacerse un estudio probabilístico, dependiendo de que tan probable es que se corte una fibra según un umbral “Mu” se dispondrá de una o más rutas alternativas para esta. 

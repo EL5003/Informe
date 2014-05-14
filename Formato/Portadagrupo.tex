@@ -1,0 +1,47 @@
+\newcommand{\portada}[9]{
+\begin{titlepage}
+
+% Upper part of the page
+ 
+
+{
+\begin{wrapfigure}{l}{.8cm}
+\vspace{-.7cm}
+\includegraphics[width=4.5cm]{Imagenes/FCFM.jpg}
+\end{wrapfigure}
+\textsc{\color{red}\hspace{2.7cm}Departamento de Ingeniería Eléctrica}\\
+\textsc{\color{gray51}\hspace{3.3cm}Facultad de Ciencias Físicas y Matemáticas}\\
+\textsc{\color{gray51}\hspace{3.3cm}Universidad de Chile}\\
+\textsc{\color{gray51}\hspace{3.3cm}\small #4}\\
+}
+% T�tulo
+\begin{center}
+%~\\[6cm] % original
+~\\[4cm]
+{\color{gray71}\textsc{#3}}
+\HRule~ \\[0.4cm]
+{ \Huge \textup \bfseries #1}\\[0.4cm]
+{ \Large \textup{#2}}\\[0.2cm]
+\HRule ~\\[2.5cm]
+\end{center}
+\begin{minipage}{.5\textwidth}
+~
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+\begin{flushright}
+\begin{tabular}{l}
+\emph{Profesor:} \\
+{\small #5}\\[0.2cm]
+\emph{Integrantes:}\\
+{\small #6}\\
+{\small #7}\\
+{\small #8}\\
+{\small #9}\\
+
+{\emph Fecha:}\\
+{\small \today}
+\end{tabular}
+\end{flushright}
+\end{minipage}
+\end{titlepage}
+}
