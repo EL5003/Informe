@@ -1,12 +1,17 @@
 \section{Estimación SLA}
 \label{sec:SLA}
 
-\emph{SLA} corresponde a las siglas de Service-level agreement. En
-español, a esto se le llama acuerdo a nivel de servicio y corresponde
-a un contrato entre el proveedor y el cliente para asegurar que el
-servicio se entregue correctamente ante un contexto legal. En el
-contrato se especifican todos los puntos relevantes para garantizar
-una cierta \emph{QoS} (calidad de servicio) para el cliente.
+El acrónimo \emph{SLA} corresponde a las siglas de Service-level
+agreement o de Acuerdo a Nivel de Servicio. Esto corresponde a un
+contrato entre el proveedor y el cliente para asegurar que el servicio
+se entregue correctamente ante un contexto legal. En el contrato se
+especifican todos los puntos relevantes para garantizar una cierta
+\emph{QoS} (calidad de servicio) para el cliente.
+
+El \emph{SLA} es, en este caso, algo que se debe determinar de las
+características del diseño del proyecto. Esto se debe a que existe una
+cierta infraestructura que será aprovechada para cumplir los objetivos
+buscados.
 
 Entre los diversos elementos que permite garantizar el \emph{SLA} de
 una red destacan:
@@ -21,3 +26,33 @@ una red destacan:
   \end{itemize}
 \item Tarifas y facturación
 \end{itemize}
+
+Una forma en que puede variar el \textbf{SLA} y que está considerado
+entre las restricciones del proyecto es la probabilidad de cortes de
+los cables.
+
+\subsection{Efecto de la probabilidad de cortes de cable en el SLA}
+\label{sec:cortes}
+
+En una infraestructura de red oscura, un corte de cable entre dos data
+centers significa que todas las conexiones entre esos data centers
+quedan suspendidas hasta que alguien repare físicamente los cables
+(introduciendo el valor del \emph{MTTR}). Ello repercute directamente
+en el \emph{SLA}, reduciendo el índice de interrupciones máximas.
+
+Afortunadamente, el desarrollo actual permite que acceder a la
+tecnología de conmutación dinámica de red ópticas sea mucho más fácil
+de lo que era hace unos años. Acceder a arquitecturas basadas en
+\emph{WSON}, \emph{ROADM} y \emph{WSS} hoy no aumenta
+significativamente el \emph{CAOEX}, \emph{OPEX} o la complejidad del
+proyecto, pero sí afecta sustancialmente al \emph{SLA}, introduciendo
+mejoras al índice de interrupciones máximas al reducir al mínimo el
+\emph{MTBF}.
+
+\subsection{Garantías en cuando al ancho de banda y \emph{throughput} de la red ótica}
+\label{sec:anchodebanda}
+
+Entre las especificaciones del proyecto se pide un cierto número y
+tipo de servicios para comunicaciones entre los data centers. Los
+equipos instalados tras el diseño propuesto en este informe tienen la
+obligación de dejar instalada esa capacidad en cada caso.
