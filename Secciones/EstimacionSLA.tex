@@ -49,10 +49,60 @@ proyecto, pero sí afecta sustancialmente al \emph{SLA}, introduciendo
 mejoras al índice de interrupciones máximas al reducir al mínimo el
 \emph{MTBF}.
 
-\subsection{Garantías en cuando al ancho de banda y \emph{throughput} de la red ótica}
+\subsection{Garantías en cuando al ancho de banda y \emph{throughput}
+  de la red óptica}
 \label{sec:anchodebanda}
 
 Entre las especificaciones del proyecto se pide un cierto número y
 tipo de servicios para comunicaciones entre los data centers. Los
 equipos instalados tras el diseño propuesto en este informe tienen la
-obligación de dejar instalada esa capacidad en cada caso.
+obligación de dejar instalada la capacidad pedida en cada caso.
+
+Las capacidades pedidas por data center y por protocolo de
+transmisión se muestran en la tabla.
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{| l | c | c | c | c | c | c |}
+    \hline
+    \textbf{10GE} & \textbf{CNT} & \textbf{CDV} & \textbf{LONG} & \textbf{SMH} & \textbf{NNA} & \textbf{LCD} \\
+    \hline
+    \textbf{CNT}  & - & 20 & 10 & 4 & 4 & 6 \\
+    \hline
+    \textbf{CAD}  &   & - & 10 & 4 & 4 & 4 \\
+    \hline
+    \textbf{LONG} &   &   & - & 6 & 4 & 4 \\
+    \hline
+    \textbf{SMH}  &   &   &   & - & 4 & 4 \\
+    \hline
+    \textbf{NNA}  &   &   &   &   & - & 4 \\
+    \hline
+    \textbf{LCD}  &   &   &   &   &   & - \\
+    \hline
+  \end{tabular}
+  \caption{Número de servicios entre data centers para protocolo 10GE}
+  \label{tab:10ge}
+\end{table}
+
+% \begin{table}[H]
+%   \centering
+%   \begin{tabular}{| l | c | c | c | c | c | c |}
+%     \hline
+%     \textbf{10GE} & \textbf{CNT} & \textbf{CDV} & \textbf{LONG} & \textbf{SMH} & \textbf{NNA} & \textbf{LCD} \\
+%     \hline
+%     \textbf{CNT}  & - & 20 & 10 & 4 & 4 & 6 \\
+%     \hline
+%     \textbf{CAD}  &   & - & 10 & 4 & 4 & 4 \\
+%     \hline
+%     \textbf{LONG} &   &   & - & 6 & 4 & 4 \\
+%     \hline
+%     \textbf{SMH}  &   &   &   & - & 4 & 4 \\
+%     \hline
+%     \textbf{NNA}  &   &   &   &   & - & 4 \\
+%     \hline
+%     \textbf{LCD}  &   &   &   &   &   & - \\
+%     \hline
+%   \end{tabular}
+%   \caption{Número de servicios entre data centers para protocolo 10GE}
+%   \label{tab:}
+% \end{table}
