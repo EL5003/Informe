@@ -1,76 +1,98 @@
-\section{Ingenier\'ia de Detalle}\label{sec:ingdetalle}
+\section{Ingeniería de detalle}\label{sec:ingdetalle}
 
-Es el conjunto de documentación técnica completa del proyecto que permite que la ejecución 
-de éste sea entregada a un tercero y éste pueda efectuar la Instalación y Puesta en Marcha 
-con mínimas variaciones.
+% Es el conjunto de documentación técnica completa del proyecto que
+% permite que la ejecución de éste sea entregada a un tercero y éste
+% pueda efectuar la Instalación y Puesta en Marcha con mínimas
+% variaciones.
 
-La Instalación y Puesta en marcha de un proyecto no necesariamente debe ser ejecutada por 
-el grupo de trabajo que prepara la Ingeniería de Detalle. El ejecutor puede ser otra sección 
-dentro de la misma Empresa o una Empresa contratista (Outsourcing). Por este motivo la 
-Ingeniería de detalle debe ser completa y muy precisa. No deben quedar detalles sin definir.
+% La Instalación y Puesta en marcha de un proyecto no necesariamente
+% debe ser ejecutada por el grupo de trabajo que prepara la Ingeniería
+% de Detalle. El ejecutor puede ser otra sección dentro de la misma
+% Empresa o una Empresa contratista (Outsourcing). Por este motivo la
+% Ingeniería de detalle debe ser completa y muy precisa. No deben quedar
+% detalles sin definir.
 
-Dentro de la Ingeniería de detalle de un proyecto, y dependiendo de la naturaleza de éste, se 
-pueden incluir los siguientes elementos:
+% Dentro de la Ingeniería de detalle de un proyecto, y dependiendo de la
+% naturaleza de éste, se pueden incluir los siguientes elementos:
 
-Planos de planta de las estaciones, especificando ubicación y dimensiones de los racks 
-que alojarán a los equipos nuevos Layout de los equipos, esto es, planos frontales de los racks indicando la disposición 
-de los equipos.
+% Planos de planta de las estaciones, especificando ubicación y
+% dimensiones de los racks que alojarán a los equipos nuevos Layout de
+% los equipos, esto es, planos frontales de los racks indicando la
+% disposición de los equipos.
 
-Diagramas en bloque de los equipos indicando las interconexiones de los diferentes 
-módulos (no se trata de los diagramas de circuitos electrónicos de cada tarjeta, información que los fabricantes no suelen entregar, sino que de las conexiones 
-externas entre las diferentes tarjetas, para conseguir que los equipos trabajen en la 
-forma deseada).
+% Diagramas en bloque de los equipos indicando las interconexiones de
+% los diferentes módulos (no se trata de los diagramas de circuitos
+% electrónicos de cada tarjeta, información que los fabricantes no
+% suelen entregar, sino que de las conexiones externas entre las
+% diferentes tarjetas, para conseguir que los equipos trabajen en la
+% forma deseada).
 
-Diagrama de cross-conexiones entre las diferentes interfaces de línea y las puertas 
-tributarias de los equipos. 
-Plan de sincronización de la Red 
-Planos de Planta Externa 
-Memorias de cálculo 
+% Diagrama de cross-conexiones entre las diferentes interfaces de línea
+% y las puertas tributarias de los equipos.  Plan de sincronización de
+% la Red Planos de Planta Externa Memorias de cálculo
  
  
-El último elemento requiere de explicaciones adicionales. 
+% El último elemento requiere de explicaciones adicionales.
  
-Una Memoria de Cálculo, como su nombre indica, es el resultado de los análisis y cálculos 
-que efectúa un ingeniero especialista en una materia para determinar la forma correcta como 
-debe ejecutarse una parte del proyecto para que el sistema funcione correctamente y de 
-acuerdo a lo esperado. 
+% Una Memoria de Cálculo, como su nombre indica, es el resultado de los
+% análisis y cálculos que efectúa un ingeniero especialista en una
+% materia para determinar la forma correcta como debe ejecutarse una
+% parte del proyecto para que el sistema funcione correctamente y de
+% acuerdo a lo esperado.
  
-La memoria de cálculo puede ser de varios tipos según el proyecto. Algunos ejemplos: 
+% La memoria de cálculo puede ser de varios tipos según el
+% proyecto. Algunos ejemplos:
  
-Memoria de cálculo de malla de tierra. Arroja como resultado especificaciones sobre la 
-geometría de la malla, profundidad y número de las barras de cobre que deben 
-enterrarse, valor de resistividad del terreno al cual debe llegarse. 
+% Memoria de cálculo de malla de tierra. Arroja como resultado
+% especificaciones sobre la geometría de la malla, profundidad y número
+% de las barras de cobre que deben enterrarse, valor de resistividad del
+% terreno al cual debe llegarse.
  
-Memoria de cálculo de un radio enlace. Incluye un perfil del enlace, cálculos de niveles 
-de señal, atenuaciones de las guías de onda y filtros, ganancia de las antenas, 
-potencias de salida de los transmisores y nivel de recepción. Pero lo más importante es 
-el cálculo de predicción de comportamiento del enlace en el peor mes del año, esto es 
-\% del tiempo que el enlace estará indisponible (Tasa de error peor que 1E-03) y \% del 
-tiempo que el enlace estará degradado (Tasa de error peor que 1E-06). Todos los 
-métodos de cálculo y valores límites para los porcentajes mencionados están 
-detallados por el ITU. 
+% Memoria de cálculo de un radio enlace. Incluye un perfil del enlace,
+% cálculos de niveles de señal, atenuaciones de las guías de onda y
+% filtros, ganancia de las antenas, potencias de salida de los
+% transmisores y nivel de recepción. Pero lo más importante es el
+% cálculo de predicción de comportamiento del enlace en el peor mes del
+% año, esto es \% del tiempo que el enlace estará indisponible (Tasa de
+% error peor que 1E-03) y \% del tiempo que el enlace estará degradado
+% (Tasa de error peor que 1E-06). Todos los métodos de cálculo y valores
+% límites para los porcentajes mencionados están detallados por el ITU.
  
-Memoria de cálculo de enlaces por fibra óptica. Este tema es de importancia para el 
-proyecto que les corresponde desarrollar. estos cálculos incluyen: balance de potencia; 
-cálculo de razón señal a ruido óptica (OSNR) y cálculos de dispersión. 
+% Memoria de cálculo de enlaces por fibra óptica. Este tema es de
+% importancia para el proyecto que les corresponde desarrollar. estos
+% cálculos incluyen: balance de potencia; cálculo de razón señal a ruido
+% óptica (OSNR) y cálculos de dispersión.
  
-Los resultados de estos cálculos determinan el diseño de la red y por lo tanto tiene 
-impacto en el CAPEX y OPEX del proyecto: tipo de interfaces ópticas (estándar, de alta 
-potencia, Ultra alta potencia), necesidad de usar Amplificadores Ópticos de Línea 
-(OLA) o Regeneradores intermedios en un enlace. 
+% Los resultados de estos cálculos determinan el diseño de la red y por
+% lo tanto tiene impacto en el CAPEX y OPEX del proyecto: tipo de
+% interfaces ópticas (estándar, de alta potencia, Ultra alta potencia),
+% necesidad de usar Amplificadores Ópticos de Línea (OLA) o
+% Regeneradores intermedios en un enlace.
  
-El impacto en el CAPEX es claro, si el diseño arroja que es necesario incluir una 
-estación regeneradora en medio de un enlace entre estaciones ya existentes, el costo 
-del proyecto se eleva notablemente. 
+% El impacto en el CAPEX es claro, si el diseño arroja que es necesario
+% incluir una estación regeneradora en medio de un enlace entre
+% estaciones ya existentes, el costo del proyecto se eleva notablemente.
  
-Por otra parte, un diseño muy audaz puede significar una reducción del margen 
-disponible en el enlace, lo cual ante una degradación menor del cable de fibra puede 
-hacer que el enlace se corte o degrade, obligando a efectuar mantenimiento con más 
-frecuencia y elevando el OPEX. 
+% Por otra parte, un diseño muy audaz puede significar una reducción del
+% margen disponible en el enlace, lo cual ante una degradación menor del
+% cable de fibra puede hacer que el enlace se corte o degrade, obligando
+% a efectuar mantenimiento con más frecuencia y elevando el OPEX.
  
-Memoria de cálculo de una torre. En un proyecto que incluya enlaces de microondas y 
-emplazamiento de radio estaciones nuevas con sus receptivas torres, se debe incluir el 
-cálculo de la estructura de la torre para asegurar su resistencia al peso de las antenas, 
-al viento, etc. Naturalmente este cálculo cae dentro de las responsabilidades de un 
-Ingeniero Civil no Eléctrico. 
+% Memoria de cálculo de una torre. En un proyecto que incluya enlaces de
+% microondas y emplazamiento de radio estaciones nuevas con sus
+% receptivas torres, se debe incluir el cálculo de la estructura de la
+% torre para asegurar su resistencia al peso de las antenas, al viento,
+% etc. Naturalmente este cálculo cae dentro de las responsabilidades de
+% un Ingeniero Civil no Eléctrico.
 
+En esta sección se presentará la ingeniería de detalle para el
+proyecto de implementación de red óptica utilizando \emph{DWDM} y
+\emph{ROADM} con \emph{WSS} basado en un enfoque probabilístico para
+diseño de caminos óptimos a partir de valores esperados del
+\emph{SLA}.
+
+La ingeniería de detalle expuesta aquí es una recopilación de todos
+los documentos técnicos que se requieren para la instalación física de
+los equipos y la programación de los \emph{ROADM}. Esta recopilación
+se basa en el diseño final seleccionado de entre las propuestas de los
+proveedores en la sección \ref{sec:ppfinal}.
