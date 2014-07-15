@@ -23,6 +23,7 @@ una red destacan:
   \item Ancho de banda medio
   \item Latencia máxima
   \item Interrupciones máximas
+  \item Probabilidad de indisponibilidad de red
   \end{itemize}
 \item Tarifas y facturación
 \end{itemize}
@@ -30,6 +31,43 @@ una red destacan:
 Una forma en que puede variar el \textbf{SLA} y que está considerado
 entre las restricciones del proyecto es la probabilidad de cortes de
 los cables.
+
+\subsection{Modelo Probabilístico de la red}
+
+La red de fibra oscura actual se compone de 6 data centers ubicados en la ciudad de santiago y alrededores. La red posee cables de fibra oscura G652 D que permiten el uso de 96 fibras ópticas en cada uno. Este tipo de fibra presenta una tasa de cortes anual de $0.05 [\frac{\text{cortes}/\text{año}}{\text{km}}]$ en zona metropolitana y $0.01 [\frac{\text{cortes}/\text{año}}{\text{km}}]$ en zona rural. Debido a esto, es se espera que cada cierto tiempo, el camino que utilizaba la red para conectar un par de data centers este inhabilitado y se requiera de caminos alternativos con el fin de mantener un estandar de calidad en disponibilidad de conexión de la red.
+
+Se define la probabilidad de que una conexión física (cable de fibra óptica G652 D) entre 2 data centers separados por una distancia $L$, se encuentre inhabilitada por cierto periodo de tiempo $\Delta T$, como la probabilidad acumulada en el tiempo de $\Delta T$ (en días) según la tasa de corte anual por km $R$ (en $\frac{\text{cortes}/\text{año}}{\text{km}}$) \eqref{proba_corte_1}.
+
+\begin{equation}
+\label{proba_corte_1}
+P(\text{corte físico en }\Delta T) = L R \Delta T /365
+\end{equation}
+
+Luego se puede extender el concepto de conexión física entre dos data centers incluyendo los nodos de paso. La probabilidad de corte en este caso se calcula como el máximo de la probabilidad de corte de cualquiera de las conexiones entre los nodos pertenecientes al camino \eqref{proba_corte_2}.
+
+\begin{equation}
+\label{proba_corte_2}
+P(\text{corte físico en }\Delta T) = \max_{i \in \text{Conexiones del Camino}} {L_i R_i \frac{\Delta T}{ 365}}
+\end{equation}
+
+El valor de esta probabilidad, se puede reducir por medio de agregar vías alternativas para conectar los dos data centers. Considerando independientes los sucesos que implican un corte en el cable, la probabilidad de indisponibilidad para la conexión entre ambos data centers será el producto de las probabilidades corte de cada camino \eqref{proba_corte_3}.
+
+\begin{equation}
+\label{proba_corte_3}
+P(\text{indisponibilidad entre data centers A y B en }\Delta T) =  \prod_{j \in \text{Caminos}}\left( \frac{\Delta T}{365}\right) \max_{i \in \text{Conex. del Camino}} {L_{i,j} R_{i,j} }
+\end{equation}
+
+Dado que la tasa de cortes depende del tipo de zona en el que esta inserto el data center, la tasa de corte $R$ depende del camino por el que vaya la conexión. Este modelo pretende establecer una estimación de la probabilidad de indisponibilidad de la conexión de cada par de data centers. Se escogió el periodo $\Delta T$ como el tiempo que los técnicos demoran en hacer las reparaciones en el corte de manera tal que la red vuelva a su estado original. Este periodo se estima en torno a los 2 días como máximo según datos anteriores.
+
+\subsection{Algortimo de cálculo de Conexiones}
+\label{sec:algoritmo_conex}
+
+La idea detrás de este algoritmo consiste en determinar un número fijo de vías de conexión entre cada par de data centers para cumplir con un estándar del SLA que permita establecer que la red posee disponibilidad en todos sus puntos con un porcentaje $0.01 \%$ de probabilidad cada 2 días.
+
+Para obtener una red que sea capaz de cumplir con estos requerimientos se requiere que la expresión de la ecuación \eqref{proba_corte_3} este acotada por $0.01\%$. 
+
+Para cada par de data centers se procede de forma iterativa buscando los caminos que representan una menor distancia utilizando el algoritmo de optimización de grafos, dijkstra. Luego se calcula la probabilidad de corte \eqref{proba_corte_3} actual y la compara con el valor umbral. Si el valor umbral sigue siendo inferior, se remueve el último camino propuesto y se agrega el siguiente camino óptimo. Se repite el proceso hasta que se obtenga la probabilidad deseada o se acaben los caminos factibles.
+
 
 \subsection{Efecto de la probabilidad de cortes de cable en el SLA}
 \label{sec:cortes}
@@ -44,12 +82,14 @@ Afortunadamente, el desarrollo actual permite que acceder a la
 tecnología de conmutación dinámica de red ópticas sea mucho más fácil
 de lo que era hace unos años. Acceder a arquitecturas basadas en
 \emph{WSON}, \emph{ROADM} y \emph{WSS} hoy no aumenta
-significativamente el \emph{CAOEX}, \emph{OPEX} o la complejidad del
+significativamente el \emph{CAPEX}, \emph{OPEX} o la complejidad del
 proyecto, pero sí afecta sustancialmente al \emph{SLA}, introduciendo
 mejoras al índice de interrupciones máximas al reducir al mínimo el
 \emph{MTBF}.
 
-\subsection{Garantías en cuando al ancho de banda y \emph{throughput}
+Por otro lado se puede utilizar estimaciones de probabilidades de corte
+
+\subsection{Garantías en cuanto al ancho de banda y \emph{throughput}
   de la red óptica}
 \label{sec:anchodebanda}
 
@@ -84,25 +124,25 @@ transmisión se muestran en la tabla.
   \label{tab:10ge}
 \end{table}
 
-% \begin{table}[H]
-%   \centering
-%   \begin{tabular}{| l | c | c | c | c | c | c |}
-%     \hline
-%     \textbf{10GE} & \textbf{CNT} & \textbf{CDV} & \textbf{LONG} & \textbf{SMH} & \textbf{NNA} & \textbf{LCD} \\
-%     \hline
-%     \textbf{CNT}  & - & 20 & 10 & 4 & 4 & 6 \\
-%     \hline
-%     \textbf{CAD}  &   & - & 10 & 4 & 4 & 4 \\
-%     \hline
-%     \textbf{LONG} &   &   & - & 6 & 4 & 4 \\
-%     \hline
-%     \textbf{SMH}  &   &   &   & - & 4 & 4 \\
-%     \hline
-%     \textbf{NNA}  &   &   &   &   & - & 4 \\
-%     \hline
-%     \textbf{LCD}  &   &   &   &   &   & - \\
-%     \hline
-%   \end{tabular}
-%   \caption{Número de servicios entre data centers para protocolo 10GE}
-%   \label{tab:}
-% \end{table}
+ \begin{table}[H]
+   \centering
+   \begin{tabular}{| l | c | c | c | c | c | c |}
+     \hline
+     \textbf{FC 4G} & \textbf{CNT} & \textbf{CDV} & \textbf{LONG} & \textbf{SMH} & \textbf{NNA} & \textbf{LCD} \\
+     \hline
+     \textbf{CNT}  & - & 30 & 20 & 4 & 4 & 6 \\
+     \hline
+     \textbf{CAD}  &   & - & 20 & 4 & 4 & 4 \\
+     \hline
+     \textbf{LONG} &   &   & - & 6 & 4 & 4 \\
+     \hline
+     \textbf{SMH}  &   &   &   & - & 4 & 4 \\
+     \hline
+     \textbf{NNA}  &   &   &   &   & - & 4 \\
+     \hline
+     \textbf{LCD}  &   &   &   &   &   & - \\
+     \hline
+   \end{tabular}
+   \caption{Número de servicios entre data centers para protocolo Fiber Channel 4G}
+   \label{tab:FC4G}
+ \end{table}
