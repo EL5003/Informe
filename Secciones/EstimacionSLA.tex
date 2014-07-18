@@ -67,6 +67,14 @@ La idea detrás de este algoritmo consiste en determinar un número fijo de vía
 Para obtener una red que sea capaz de cumplir con estos requerimientos se requiere que la expresión de la ecuación \eqref{proba_corte_3} este acotada por $0.01\%$. 
 
 Para cada par de data centers se procede de forma iterativa buscando los caminos que representan una menor distancia utilizando el algoritmo de optimización de grafos, dijkstra. Luego se calcula la probabilidad de corte \eqref{proba_corte_3} actual y la compara con el valor umbral. Si el valor umbral sigue siendo inferior, se remueve el último camino propuesto y se agrega el siguiente camino óptimo. Se repite el proceso hasta que se obtenga la probabilidad deseada o se acaben los caminos factibles.
+Los resultados obtenidos por el algoritmo se muestran en la figura
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=13cm]{Imagenes/caminos}
+  \caption{Caminos que pueden utilizar los datacenters para la comunicaciones, determinados según el algoritmo que fija la probabilidad de indisponibilidad.}
+  \label{fig:caminos}
+\end{figure}
 
 
 \subsection{Efecto de la probabilidad de cortes de cable en el SLA}
