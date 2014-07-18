@@ -6,12 +6,12 @@
 \subsection{Diseños propuestos}
 \label{sec:disenos}
 
-La propuesta consiste en desarrollar una red dinámica eficiente que
+La propuesta consiste en desarrollar una red dinámica y eficiente que
 sea robusta ante posibles fallas en la interconexión física de los
-datacenters. Para esto se ha contactado a varios proveedores de
-dispositivos ópticos \emph{DWDM} para cotizar los distintos equipos
-que necesitan ser instalados en los nodos de la red y así poder contar
-con un valor estimado de el costo de capital del proyecto.
+\emph{datacenters}. Para esto fueron contactados varios proveedores de
+dispositivos ópticos \emph{DWDM} con el fin de cotizar los equipos que 
+irán instalados en los nodos de la red y así poder contar con un valor 
+estimado de el costo de capital del proyecto.
 
 Los proveedores de redes contactados fueron:
 \begin{itemize}
@@ -23,8 +23,8 @@ Los proveedores de redes contactados fueron:
 \item Sonda (representantes de Cisco en Chile)
 \end{itemize}
 
-A la par de esta cotización, se ha desarrollado un modelo
-probabilístico para la programación de los dispositivos \emph{ROADM}
+A la par de esta cotización, se desarrolló un modelo probabilístico 
+para la programación de los dispositivos \emph{ROADM}
 que asegura un valor de mínimo de disponibilidad de la red; esto
 determina principalmente el \emph{SLA} estimado de la red (mayores
 detalles se exponen en la sección \ref{sec:SLA}).
@@ -32,15 +32,6 @@ detalles se exponen en la sección \ref{sec:SLA}).
 Este modelo probabilístico se programará en el controlador
 \emph{ROADM} de la red, haciendo que el requerimiento en \emph{SLA} de
 la red sea en efecto una variable de entrada para el diseño.
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.7\textwidth]{Imagenes/Diagrama_Fibra_Oscura.eps}
-\caption{Diagrama inicial de red oscura preexistente. Este diagrama se
-  presenta a los distintos proveedores para que se pueda estimar el
-  número de amplificadores, compensadores de dispersión necesarios,
-  etcétera.}
-\end{figure}
 
 % Para la definición de la red, fue necesario definir las rutas que
 % conectan cada par de \textit{DataCenters}.  Para obtener un modelo
