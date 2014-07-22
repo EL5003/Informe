@@ -7,49 +7,56 @@
 
 \subsubsection{Fibra de tipo G.652.D}
 
-Como ya se ha dicho en secciones previas, la fibra oscura a disposición es del tipo G.652.D, cuyas carácteristicas ópticas se muestran en la siguiente tabla: 
+Como ya se ha dicho en secciones previas, la fibra oscura de la que se
+dispone en el tendido preexistente es del tipo G.652.D. Sus
+características ópticas se muestran en la tabla \ref{fig:tablafibra}.
 
 \begin{figure}[H]
   \centering
   \includegraphics[scale=1]{Imagenes/Fibra.png}
-  \caption{Carácteristicas ópticas fibra G.D652.D \url{http://www.telnet-ri.es/fileadmin/user_upload/hojas_producto_EN/CABLES_FO/Fibra_SM_G.652.D_EN_V1.0.pdf}}
-  \label{fig:dwdmchannels}
+  \caption{Carácteristicas ópticas fibra G.D652.D
+    \url{http://www.telnet-ri.es/fileadmin/user_upload/hojas_producto_EN/CABLES_FO/Fibra_SM_G.652.D_EN_V1.0.pdf}}
+  \label{fig:tablafibra}
 \end{figure}
-
-Los parámetros geométricos y mecánicos no se incluyen a fin de no saturar el presente informe, pero pueden ser encontrados en los anexos.
   
-Por otro lado, sabido es el hecho de que las fibras ópticas son muy susceptibles a los factores medioambientaes, siendo dentro de los más escenciales la penetración de agua, vibración, cambios de temperatura y ataques biológicos (roedores por ejm.) o también cargas de viento y hielos para tendidos aéreos. 
+Es sabido el hecho de que las fibras ópticas son muy susceptibles a
+los factores medioambientales, siendo dentro de los más sensibles la
+penetración de agua, vibración, cambios de temperatura y ataques
+biológicos (roedores por ejemplo). También afectan para tendidos
+aéreos las cargas de viento y hielos.
 
 \subsubsection{DWDM}
 \label{sec:dwdm}
 
 Las redes de fibra óptica modernas utilizan una tecnología de
 transporte de alta capacidad llamada \emph{Dense Wavelength Division
-  Multiplexing} (en español Multiplexación densa de longitud de onda),
-o más comúnmente denominado por sus siglas en inglés \emph{DWDM}. Esta
-tecnología permite que se puedan introducir varias señales a una misma
-fibra óptica mono modo, haciendo que la transmisión goce de mayor
-flexibilidad e interoperabilidad con dispositivos con inteligencia.
+  Multiplexing} (en español \emph{multiplexación densa de longitud de
+  onda}) cuyas siglas en inglés son \emph{DWDM}. Esta tecnología
+permite que se puedan introducir varias señales a una misma fibra
+óptica mono modo, permitiendo transmisiones con mayores anchos de
+banda.
 
 \emph{DWDM} opera en la capa de red, por lo que es independiente de
 los protocolos de transporte y enlace. La multiplexación ocurre sobre
 la banda C, es decir, a partir de la longitud de onda 1529,16 nm y
-hasta 1560,61 nm. En frecuencias, esto corresponde al rango entre
-192100 GHz y 196000 GHz (frecuencia central: 1931000 GHz).
+hasta 1560,61 nm ($\lambda$ central = 1510 nm). En frecuencias, esto
+corresponde al rango entre 192100 GHz y 196000 GHz (frecuencia
+central: 1931000 GHz).
 
 A medida que aumentan los avances tecnológicos, los módulos que
 trabajan con esta técnica de multiplexación incorporan mayor capacidad
-al juntar cada vez más los canales en el espacio de frecuencia,
+al condensar cada vez más los canales en el espacio de frecuencia,
 aumentando la cantidad de señales en una sola fibra. En la actualidad,
 la mayor parte de las empresas de telecomunicaciones realiza diseños
-que consideran espaciamientos de 100 o 50 GHz, lo que permite utilizar
-la fibra con 40 ú 80 canales (o $\lambda$'s) respectivamente. No
+que consideran espaciamientos de 100 o 50 GHz, lo que se traduce en
+enlaces de 40 ú 80 canales (o $\lambda$'s) respectivamente. No
 obstante, la ciencia ya experimenta con canales espaciados por 25 e
 incluso 12,5 GHz solamente, pudiendo llegarse a incorporar en el
-futuro hasta 320 $\lambda$ en una sola fibra. En la jerga de
-telecomunicaciones ópticas, a los distintos $\lambda$ se les llama
-también ``colores'', por la similitud de conceptos en la óptica
-tradicional.
+futuro hasta 320 $\lambda$ en una sola fibra. 
+
+En la jerga de telecomunicaciones ópticas, a los distintos $\lambda$
+se les llama también ``colores'', por la similitud de conceptos en la
+óptica de comunicaciones y la óptica tradicional.
 
 \begin{figure}[H]
   \centering
@@ -68,38 +75,40 @@ tradicional.
 \subsubsection{OADM}
 \label{sec:oadm}
 
-Los dispositivos que se encargan de agregar o quitar $\lambda$'s de
-una fibra con el fin de controlar el enlace por donde se encausan las
+Los dispositivos que se encargan de agregar o quitar $\lambda$'s de la
+fibra con el fin de controlar el enlace por donde se encausan las
 señales a enviar se llaman \emph{OADM}, siglas de ``optical add-drop
 multiplexer''.
 
 Existen dos tipos de \emph{OADM}. El más primitivo es el \emph{FOADM},
-con la F de ``fixed'', es decir, fijo o estático. Este tipo de
-direccionamiento no es reconfigurable, es decir, el diseño de la red
-debe incluir los dispositivos que harán el encausamiento en los nodos
-requeridos. Los filtros o LASER debían ser fijados en los nodos,
-acorde a las necesidades de la red al momento de su diseño. En el caso
-de requerir un cambio en la red se debían cambiar y reconectar jumpers
-físicos, debiendo detener el funcionamineto de la red por el tiempo
+donde la F significa ``fixed'', es decir, fijo o estático. Este tipo
+de direccionamiento no es reconfigurable, es decir, el diseño de la
+red debe incluir los dispositivos que harán el encausamiento en los
+nodos requeridos, sin permitir cambio dinámico de canales en la
+fibra. En \emph{FOADM}, los filtros o LASER debían ser fijados en los
+nodos, acorde a las necesidades de la red al momento de su diseño. En
+el caso de requerir un cambio en la red se debían cambiar y reconectar
+jumpers, debiendo detener el funcionamiento de la red por el tiempo
 que este proceso demorase. Además, la granularidad o precisión del
-encausamiento era de a lo menos $2\lambda$, lo cual introducía
-ineficiencia de recursos en la red, disminuyendo el ancho de banda de
-la red a la mitad.
+encausamiento era de por lo menos $2\lambda$, lo cual introducía
+despilfarro de recursos en la red, disminuyendo el ancho de banda de
+la red a al menos la mitad.
 
-Debido a este inconveniente, se creó y rápidamente se reemplazó al
+Debido a este inconveniente, se creó y rápidamente se reemplazó el
 \emph{FOADM} por el \emph{ROADM}, con la R de
-``reconfigurable''. Estos dispositivos son programables remotamente, e
-incluso la conmutación puede cambiar de acuerdo a la demanda de forma
-dinámica. Su granularidad es de tan solo $1\lambda$, convirtiéndose en
-una opción realmente factible y adecuada para diseñar redes modernas y
-flexibles.
+``reconfigurable''. Estos dispositivos son reprogramables remotamente,
+e incluso la conmutación puede cambiar de acuerdo a la demanda de
+forma dinámica y automática. Su granularidad es de tan solo
+$1\lambda$, convirtiéndose en la única opción realmente factible y
+adecuada para diseñar redes escalables en el tiempo.
 
 Los dispositivos \emph{ROADM} han evolucionado desde su primera
 incorporación al mercado. En un principio, los \emph{ROADM} debían
 realizar demultiplexación y multiplexación de todos los canales para
-poder ser flexibles, además de muchos otros inconvenientes. Esto
-elevaba el costo de la red mucho pues para minimizar las pérdidas en
-los nodos se debían utilizar transpondedores de calidad superior.
+poder manejar eficientemente las señales, además de varios otros
+inconvenientes. Esto elevaba el costo de la red mucho pues para
+minimizar las pérdidas en los nodos se debían utilizar transpondedores
+de calidad superior.
 
 Los \emph{ROADM} de segunda generación mejoraban en algo los problemas
 en la calidad de señal y permitían el switching de mayor calidad de
@@ -107,26 +116,28 @@ longitudes de onda individuales utilizando una técnica llama ``Wave
 Blocking'' (\emph{WB}) o bloqueo de onda. El \emph{WB} solucionaba
 varios de los problemas que tenían los dispositivos \emph{ROADM} de
 primera generación, pero aún no eran lo suficientemente robustos,
-pequeños y útiles para ser utilizados a nivel ``metro'' (redes
-metropolitanas).
+pequeños y útiles para ser utilizados a todo nivel, siendo las redes
+con \emph{ROADM} de segunda generación usualmente utilizadas solo a
+nivel de redes ``metro'' (redes metropolitanas).
 
-La tercera generación de \emph{ROADM} se llama \emph{WSS} pues
-introduce la capacidad de hacer redes totalmente flexibles, de forma
-dinámica y sin necesidad de tener a la cantidad de personal técnico
-que se necesitaba previamente en los nodos de la red. Además, bajaron
-de precio significativamente los dispositivos que ofrecían estos
-servicios y aumentó con ello la oferta de dispositivos \emph{DWDM}
-integrados con \emph{ROADM}.
+La tercera generación de \emph{ROADM} hace uso de unos módulos
+llamados \emph{WSS} (\emph{wave selective switch}). Esta
+especificación introduce la capacidad de hacer redes totalmente
+flexibles, de forma dinámica y sin necesidad de tener a técnicos
+capacitados en la configuración de redes con \emph{OADM}
+fijos. Adicionalmente a la mejora tecnológica, los precios de los
+dispositivos disminuyeron puesto al gran aumento de la oferta de
+soluciones \emph{DWDM} integrados con \emph{ROADM}.
 
-Otra de las bondades de \emph{WSS} fue haber incorporado la
-funcionalidad para interconectar redes de distintas topologías (redes
-en anillo y redes en malla, por ejemplo). A estos \emph{ROADM} se les
-dice que cuentan con N grados de libertad (con N la cantidad de
-enlaces que conectan).
+Otra de las bondades que trajo la introducción de los \emph{WSS} fue
+haber incorporado la funcionalidad para interconectar redes de
+distintas topologías (redes en anillo y redes en malla, por
+ejemplo).
 
 % Fuente: http://www.infonetics.com/whitepapers/infonetics-roadm-evolves-white-paper-february-2006.pdf
 
-Las funcionalidades actuales de un \emph{ROADM} son las siguientes:
+Las funcionalidades actuales de un \emph{ROADM} con \emph{WSS} son las
+siguientes:
 \begin{itemize}
 \item \textbf{Add}: añade una señal externa a la red existente DWDM
 \item \textbf{Drop}: extrae una señal de la red en el nodo donde se ejecuta la
@@ -171,6 +182,17 @@ filtros pasa banda adecuados a los diseños. Habiendo buenos
 estándares, los filtros pueden ser diseñados de forma óptima para
 casos generales.
 
+La tecnología actual más típica de amplificadores aprovecha un
+fenómeno físico del erbio ($Er_{68}$) que, al ser utilizado como
+material dopante de fibra óptica y en presencia de una bomba de
+fotones, amplifica la señal completa e introduce un ruido altamente
+predecible y lineal. Estos amplificadores se llaman por sus siglas en
+inglés \emph{EDFA} (\emph{erbium doped fiber amplifier}).
+
+En este diseño solamente se usaron amplificadores booster y
+preamplificadores, ya que las distancias de los enlaces no eran
+suficientemente largas para introducir \emph{OLA's}.
+
 \subsubsection{Compensadores de dispersión}
 \label{sec:dispersion}
 
@@ -181,37 +203,36 @@ frecuencia (o lo que es lo mismo, que se afine en el dominio del
 tiempo), haciendo que sea más probable la interferencia entre
 $\lambda$'s de distintos canales. Afortunadamente, este fenómeno está
 ampliamente estudiado y se sabe con bastante precisión cómo reducir su
-efecto a un mínimo.
+efecto a un mínimo, al menos en su componente lineal, predominante en
+señales con intensidades ``pequeñas''.
 
-Existen dos enfoques para combatir la dispersión cromática, al menos
-en su componente lineal. Los enfoques son por \emph{DSP}
-(procesamiento digital de señales) y por \emph{DCM} (dispersion
-compensation module). El más relevante de estos enfoques por ser el
-más utilizado es el \emph{DCM}, por lo que en este diseño se
-utilizarán compensadores de dispersión físicos.
+Existen dos enfoques para combatir la dispersión cromática lineal. Uno
+es usando \emph{DSP} (procesamiento digital de señales) y el otro
+usando dispositivos \emph{DCM} (dispersion compensation module). El
+más relevante de estos enfoques y el más utilizado es el \emph{DCM}.
 
 Todas las fibras ópticas tienen un coeficiente de dispersión cromática
 que las caracteriza. El coeficiente depende de $\lambda$ y sus
-unidades son $\frac{ps}{nm \times Km}$. Los \emph{DCM} son dispositivos
-que se adquieren por su distancia de fibra a compensar y que tienen un
-coeficiente de dispersión negativo que contrarresta el efecto de la
-fibra en cuanto a la dispersión que ella intrínsecamente provoca en la
-señal.
+unidades son $\frac{ps}{nm \times Km}$. Los \emph{DCM} son
+dispositivos que se especifican en el mercado de acuerdo a su
+distancia de fibra a compensar. Tienen un coeficiente de dispersión
+negativo que contrarresta el efecto de la fibra en cuanto a la
+dispersión que ella intrínsecamente provoca en la señal.
 
 Además del efecto lineal de la dispersión, existen efectos no lineales
-que se suman y se son muchísimo más complicados de compensar. Estos
+que se suman y que son muchísimo más complicados de compensar. Estos
 son la \emph{SPM} (self phase modulation) y \emph{XPM} (cross phase
 modulation). Estos efectos se producen ya que el campo eléctrico se
-modula a sí mismo a medida que avanza en la fibra.
+modula a sí mismo a medida que avanza en la fibra (cuando este es lo
+suficientemente grande, los efectos de \emph{SPM} y \emph{XPM} toman
+mayor importancia).
 
 \subsection{Dispositivos presentes en una red fotónica}
 \label{sec:dispositivos}
 
-Algunos de los siguientes dispositivos expuestos en las próximas
-secciones ya fueron comentados en la sección \ref{sec:redfotonica}. En
-efecto, los dispositivos que aquí se presentan sirven para llevar
-todos los desarrollos tecnológicos que significa la multiplexión por
-\emph{DWDM} y el control de longitudes de onda por \emph{OADM} a la
+Los dispositivos que aquí se presentan sirven para llevar todos los
+desarrollos científicos teóricos que explican la multiplexación por
+\emph{DWDM} y el control de longitudes de onda por \emph{ROADM} a la
 práctica.
 
 Los dispositivos que deben existir en una red óptica estándar son:
@@ -225,11 +246,9 @@ Los dispositivos que deben existir en una red óptica estándar son:
   transmitirse a la salida (concepto de multiplexación). Los
   demultiplexores hacen lo inverso; seleccionan una de las longitudes
   de onda de la entrada y la transmiten a la salida.
-\item \textbf{Amplificador óptico/OLA}
+\item \textbf{Amplificadores ópticos}
 \item \textbf{Canal de supervisión óptico (OSC)}: es un canal en una
   banda fuera de la banda C estándar (1510 nm nominalmente
   hablando). Sirve para transportar señales de alarma desde los
-  amplificadores OLA, principalmente.
-\item \textbf{DCM}: corresponde a los compensadores de dispersión
-  físicos, comentados en la sección \ref{sec:dispersion}.
+  amplificadores, principalmente.
 \end{itemize}
