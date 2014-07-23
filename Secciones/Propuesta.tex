@@ -1,17 +1,15 @@
 \section{Propuesta}
 \label{sec:propuesta}
 
-
-
-\subsection{Diseños propuestos}
+\subsection{Cotizaciones}
 \label{sec:disenos}
 
-La propuesta consiste en desarrollar una red dinámica y eficiente que
-sea robusta ante posibles fallas en la interconexión física de los
-\emph{datacenters}. Para esto fueron contactados varios proveedores de
-dispositivos ópticos \emph{DWDM} con el fin de cotizar los equipos que 
-irán instalados en los nodos de la red y así poder contar con un valor 
-estimado de el costo de capital del proyecto.
+En una primera instancia, varios proveedores de dispositivos ópticos
+\emph{DWDM} fueron contactados para estudiar distintas propuestas con
+equipos distintos. Contar con varias de estas cotizaciones habría
+permitido comparar los costos de los equipos que irán instalados en
+los nodos de la red y así habría permitido poder estimar de mejor
+manera el costo de capital del proyecto.
 
 Los proveedores de redes contactados fueron:
 \begin{itemize}
@@ -23,15 +21,14 @@ Los proveedores de redes contactados fueron:
 \item Sonda (representantes de Cisco en Chile)
 \end{itemize}
 
-A la par de esta cotización, se desarrolló un modelo probabilístico 
-para la programación de los dispositivos \emph{ROADM}
-que asegura un valor de mínimo de disponibilidad de la red; esto
-determina principalmente el \emph{SLA} estimado de la red (mayores
-detalles se exponen en la sección \ref{sec:SLA}).
-
-Este modelo probabilístico se programará en el controlador
-\emph{ROADM} de la red, haciendo que el requerimiento en \emph{SLA} de
-la red sea en efecto una variable de entrada para el diseño.
+A la par de esta cotización, se desarrolló un modelo probabilístico
+para la programación de los dispositivos \emph{ROADM} que asegura un
+valor de mínimo de disponibilidad de la red; esto determina
+principalmente el \emph{SLA} estimado de la red (mayores detalles se
+exponen en la sección \ref{sec:SLA}). Este modelo probabilístico se
+programará en la red con topología \emph{WSON} y controlada a través
+de dispositivos \emph{WSS}, haciendo que el requerimiento en
+\emph{SLA} sea en efecto una variable de entrada para el diseño.
 
 % Para la definición de la red, fue necesario definir las rutas que
 % conectan cada par de \textit{DataCenters}.  Para obtener un modelo
@@ -50,17 +47,43 @@ la red sea en efecto una variable de entrada para el diseño.
 % de seguridad, si no lo cumple se agregarán más rutas alternativas
 % hasta que se logre dicho objetivo.
 
-Hasta el día 18 de julio e 2014, no ha habido respuesta de los
+Hasta el día 23 de julio de 2014, no ha habido respuesta de los
 proveedores de sistemas completos. Por ello y para tener un sistema
-cotizado para la fecha de entrega, se cotizó en línea en tiendas
-proveedoras de equipos separados.
+cotizado para la fecha de entrega, se cotizó utilizando solamente la
+lista de precios de Ericsson, con la cual se contaba gracias a
+contactos del docente del taller con dicha empresa.
 
 \subsection{Propuesta final}
 \label{sec:ppfinal}
 
 Al final, la propuesta que se presenta en este informe consiste en una
-red óptica \emph{DWDM} modular, compuesto por dispositivos y
-racks. Estos equipos se instalarán en los \emph{DC}.
+red óptica \emph{DWDM} modular, compuesto por dispositivos, jumpers y
+racks. Estos equipos se instalarán en los \emph{DC} tal y como se
+detalla en la sección \ref{sec:ingdetalle}.
+
+En total, se cotizaron los equipos y en la cantidad mostrada en la
+tabla \ref{tab:propfinal}.
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{| c | r |}
+    \hline
+    Equipo & Cantidad \\
+    \hline
+    WSS & 36 \\
+    EDFA & 72 \\
+    MUX & 6 \\
+    DEMUX & 6 \\
+    ODF & 6 \\
+    Racks & 12 \\
+    Transpondedores 10GE & 92 \\
+    Transpondedores 4FC & 122 \\
+    Fibra (jumpers) & 132 \\
+    \hline
+  \end{tabular}
+  \caption{Cantidad de equipos cotizados.}
+  \label{tab:propfinal}
+\end{table}
 
 \subsubsection{CAPEX}
 \label{sec:capex}
