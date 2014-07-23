@@ -162,3 +162,99 @@ se presenta en las siguientes secciones.
   \caption{Diagrama de conexión de equipos para infrastructura ROADM en ``Santa Marta de Huechuraba''}
   \label{fig:drsmh}
 \end{figure}
+
+\subsection{Montaje de racks}
+\label{sec:racks}
+
+Los racks utilizados en cada \emph{DC} se instalan de la misma manera,
+tal y como se muestra en el diagrama \ref{fig:racks}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=12cm]{Imagenes/racks3.pdf}
+  \caption{Montaje de racks en los data centers}
+  \label{fig:racks}
+\end{figure}
+
+Cada \emph{DC} deberá contar con un rack para albergar y proteger los
+ODF (puntos de red de la fibra óptica) y uno para almacenar los
+equipos \emph{ROADM}.
+
+El rack de \emph{ROADM}, a su vez, debe seguir las conexiones
+mostradas en la sección \ref{sec:diagramasroadm}.
+
+\subsection{Anexo: cálculo OSNR}
+\label{sec:osnr}
+
+El \emph{OSNR} (\emph{optical signal to noise ratio}) es la intensidad
+de la señal sobre la del ruido en redes ópticas. Se genera en los
+\emph{EDFA} (\emph{erbium doped fiber amplifier}), es decir, en los
+amplificadores ópticos que no regeneran la señal sino que la
+``escalan'' en todas las frecuencias, incluyendo al ruido.
+
+Se puede calcular usando la fórmula: $$n = fgh \nu \Delta \nu$$ donde
+$n$ es el nivel de \emph{OSNR}, $f$ es la cifra de ruido del
+amplificador, $g$ es la ganancia del mismo, $h$ es la constante de
+Planck, $\nu$ es la longitud de onda central de la banda utilizada (en
+este caso, la banda C opera sobre los 1550 nm) y $\Delta \nu$ es el
+ancho de banda de los canales (en la banda C, el ancho está
+aproximadamente por los 0.1 nm). Los tres últimos términos para la
+banda C son constantes y se cumple que $$h\nu \Delta \nu \approx -58
+dBm$$
+
+Los parámetros $f$ y $g$ son entregados por el fabricante de los
+equipos de amplificación y sus unidades son miliWatts.
+
+En el caso de este diseño, los amplificadores existentes en una línea
+son dos: el booster y el preamplificador. Por ello, el nivel de ruido
+aumenta como la suma de ambos niveles de ruido.
+
+En esta caso los cálculos son los siguientes:
+\begin{enumerate}
+\item Se identifica la intensidad de la señal útil a la salida del
+  preamplificador, es decir, a la entrada del nodo receptor de la
+  señal. La señal se calcula como el producto de las ganancias de los
+  \emph{EDFA} en la línea dividido por la atenuación total del
+  enlace. La atenuación está dada por la distancia y la característica
+  de la fibra. Las unidad de este valor es en miliWatts.
+
+  $$p_2=\frac{g_Bg_{PA}}{l}$$
+
+  En este caso, $g_B$ y $g_{PA}$ son iguales a la ganancia del
+  amplificador \emph{EDFA} (20 dB = 100 en proporción).
+\item Se calcula el ruido a partir de la relación $$n=FGh \nu \Delta
+  \nu$$, donde $F$ es el nivel de ruido del amplificador (fijado en 5
+  dB), $G$ es la ganancia (fijada en 20 dB) y $h \nu \Delta \nu$ es
+  igual $-58dB$.
+\item Se hace esto para cada enlace.
+\end{enumerate}
+
+Los cálculos de la tabla \ref{tab:osnr1} muestran los resultados de
+intensidad de la potencia de la señal al final de cada enlace para
+la red propuesta.
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{| l | c | c | c | c | c | c |}
+    \hline{}
+    Enlace & Dist. (Km.) & Atenuac. (dB) \footnote{La atenuación se calculó considerandola lineal como 0.24 dB/Km. de fibra.} & Atenuac. (prop) & $P_out$ (prop) & Ruido (prop) & OSNR (dB) \\
+    \hline{}
+    CDV-SMH & 30 & 7,2 & 5,25 & 1905,46 & 0,0101 & 52,78 \\
+    CDV-LONG & 110 & 26,4 & 436,52 & 22,91 & 0,0006 & 45,70 \\
+    CDV-CNT & 45 & 10,8 & 12,02 & 831,76 & 0,0047 & 52,51 \\
+    SMH-CNT & 20 & 4,8 & 3,02 & 3311,31 & 0,0171 & 52,87 \\
+    SMH-LCD & 25 & 6 & 3,98 & 2511,89 & 0,0131 & 52,83 \\
+    CNT-LCD & 12 & 2,88 & 1,94 & 5152,29 & 0,0263 & 52,92 \\
+    CNT-NNA & 10 & 2,4 & 1,74 & 5754,40 & 0,0293 & 52,93 \\
+    NNA-LCD & 15 & 3,6 & 2,29 & 4365,16 & 0,0224 & 52,90 \\
+    LONG-CNT & 132 & 31,68 & 1472,31 & 6,79 & 0,0005 & 41,03 \\
+    \hline
+  \end{tabular}
+  \caption{Tabla de valores de intensidad de la señal útil al final del enlace amplificado.}
+  \label{tab:osnr1}
+\end{table}
+
+El valor de \emph{OSNR} obtenido es satisfactorio para un diseño como
+el propuesto, ya que el umbral supera los $18dB$ mínimos de un sistema
+que utiliza tranpondedores no coherentes de 10 Gb, como es este el
+caso.
