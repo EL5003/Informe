@@ -4,6 +4,12 @@
 %Agrega las referencias a la tabla de contenidos
 %\usepackage[nottoc,numbib]{tocbibind}
 
+%Otra fuente (comentar)
+%\renewcommand*\rmdefault{ppl}
+
+%Cambiar espaciado entre párrafos
+\setlength{\parskip}{3pt}
+
 \input{Formato/paquetes.tex}
 \fvset{frame=single,framesep=1mm,fontfamily=courier,fontsize=\scriptsize,numbers=left,framerule=.3mm,numbersep=1mm,commandchars=\\\{\}}
 \definecolor{g}{rgb}{0,0.51,0}
@@ -73,6 +79,9 @@
 \newpage
 \input{Secciones/EstimacionSLA}
 % Garantías que da el proovedor al consumidor.
+\newpage
+\input{Secciones/EvaluacionEconomica}
+% CAPEX Y OPEX.
 \newpage
 \input{Secciones/Conclusiones}
 %% Adding references page
