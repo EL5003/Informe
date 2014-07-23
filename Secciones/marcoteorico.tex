@@ -162,7 +162,7 @@ El \textbf{preamplificador} va en el receptor y sirve para mejorar la
 lectura de la señal por parte del dispositivo óptico de destino. En 
 ocasiones, éste puede ir en el mismo módulo del receptor.
 
-Los \textbf{Optical Line Amplifiers} o amplificadores de línea sirven para
+Los \textbf{optical line amplifiers} o amplificadores de línea sirven para
 aumentar la potencia de forma de poder abarcar distancias de hasta miles
 de kilómetros. Demasiados \emph{OLA} pueden aumentar el efecto de la
 dispersión cromática no lineal y, sobre todo, aumentar los niveles de
@@ -223,25 +223,25 @@ mayor importancia).
 \subsection{Dispositivos presentes en una red fotónica}
 \label{sec:dispositivos}
 
-Los dispositivos que aquí se presentan sirven para llevar todos los
-desarrollos científicos teóricos que explican la multiplexación por
-\emph{DWDM} y el control de longitudes de onda por \emph{ROADM} a la
-práctica.
+A continuación se presenta un resumen de los elementos esenciales para
+una red óptica basada en DWDM. Estos componentes llevan a la práctica
+las tecnologías nombradas en la sección anterior.
 
-Los dispositivos que deben existir en una red óptica estándar son:
 \begin{itemize}
-\item \textbf{Transpondedor}: sirven para transformar una señal de
-  algún protocolo de transporte típico (señales eléctricas) hacia
-  longitudes de onda capaces de ser transmitidas por FO (señales
-  ópticas) y vice versa.
-\item \textbf{Multiplexor/demultiplexor}: los multiplexores sirven
-  para seleccionar una de las longitudes de onda entrantes para
-  transmitirse a la salida (concepto de multiplexación). Los
+\item \textbf{Transpondedor}: ermite transformar una señal de
+  algún protocolo de transporte típico (e.g. señales eléctricas) en
+  ondas transmitibles por \emph{FO} (señales ópticas) y vice versa.
+\item \textbf{Multiplexor/Demultiplexor}: los multiplexores permiten
+  combinar señales con distinta longitud de onda provenientes de 
+  entradas independientes y enviarlas por una salida común. Los
   demultiplexores hacen lo inverso; seleccionan una de las longitudes
-  de onda de la entrada y la transmiten a la salida.
-\item \textbf{Amplificadores ópticos}
-\item \textbf{Canal de supervisión óptico (OSC)}: es un canal en una
-  banda fuera de la banda C estándar (1510 nm nominalmente
-  hablando). Sirve para transportar señales de alarma desde los
-  amplificadores, principalmente.
+  de onda de la entrada única y la transmiten a una salida individual.
+\item \textbf{Amplificadores Ópticos}: mencionados en la sección 
+  anterior, restauran la señal a un nivel apropiado para su uso en
+  los componentes de la red (e.g. transporte por fibra, conmutación, 
+  multiplexación y demultiplexación).
+\item \textbf{Canal Óptico de Servicio}: este canal se ubica en una
+  frecuencia fuera de la banda C estándar (1510 nm, nominalmente
+  hablando). Sirve para transportar señales de alarma entre los
+  componentes internos de la red (e.g. conmutadores).
 \end{itemize}
