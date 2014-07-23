@@ -2,26 +2,24 @@
 \label{sec:caracterizacion}
 
 La red considerada para el comienzo de este proyecto consiste en un
-tendido de fibra óptica estándar tipo G.652.D (ver sección
-\ref{sec:marcoteorico}). Cada enlace de fibra óptica une un par de
-\emph{DC} de forma directa y sin estaciones intermedias mediante
-cables de 96 fibras diseñadas para operar en la banda C. Esta red no
-posee ningún tipo de multiplexor. En un comienzo, cada fibra tiene
-soporte para un solo servicio usando un par de transmisión y recepción
-Láser, filtros y amplificadores, donde aplique. Se supone, sin
-embargo, que en un comienzo el tendido de fibras es de un punto a otro
-entre dos \emph{DC}, sin ningún tipo de equipos instalado.
+tendido de fibra óptica estándar tipo G.652.D\cite{G652D}. Cada enlace
+de fibra óptica une un par de \emph{DC} de forma directa y sin
+estaciones intermedias mediante cables de 96 fibras diseñadas para
+operar en la banda C. Esta red no posee ningún tipo de multiplexor.
+En un comienzo, cada fibra tiene soporte para un solo servicio usando
+un par de transmisión y recepción Láser, filtros y amplificadores,
+donde aplique. Se supone, sin embargo, que en un comienzo el tendido
+de fibras es de un punto a otro entre dos \emph{DC}, sin ningún tipo de
+equipos instalado.
 
-El tendido inicial es de 399 Km distribuídos en 9 tramos, de los
-cuales tres son de distancias mayores a 40 Km. Este tendido tal y como
-está no tiene considerado ningún análisis que considere cortes de los
-cables, por lo que no existen garantías \emph{SLA} que establezcan
-políticas claras de calidad de servicio. Por otro lado, es sabido que
-tramos de más de 30 Km. deben ser compensados en atenuación y los
-mayores a 40 Km. deben ser compensados en dispersión
-cromática. También por esa razón el tendido de fibra oscura no cumple
-con el \emph{SLA} establecido en calidad de la señal debido a que no
-existen garantías de una correcta recepción de la señal.
+El tendido inicial es de 399 Km distribuidos en 9 tramos con longitudes
+de entre 10 y 132 Km. Este tendido tal y como está no tiene considerado
+ningún análisis que considere cortes de los cables, por lo que no 
+existen garantías de \emph{SLA} que establezcan políticas claras de
+\emph{uptime} o \emph{delay} en el servicio. Por otro lado, dado que
+las distancias no superan los 200 Km, no se cuenta ni se requiere el
+uso de amplificadores de señal ni compensadores de dispersión a lo 
+largo de estas vías (ver sección \ref{sec:marcoteorico}).
 
 Por otro lado, no existen en la red inicial mecanismos íntegros de
 recepción, tales cómo equipos de \textit{Optical Distribution Frame
