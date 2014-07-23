@@ -100,29 +100,28 @@ $1\lambda$, convirtiéndose en la única opción realmente factible y
 adecuada para diseñar redes escalables en el tiempo.
 
 Los dispositivos \emph{ROADM} han evolucionado desde su primera
-incorporación al mercado. En un principio, los \emph{ROADM} debían
-realizar demultiplexación y multiplexación de todos los canales para
-poder manejar eficientemente las señales, además de varios otros
-inconvenientes. Esto elevaba el costo de la red mucho pues para
-minimizar las pérdidas en los nodos se debían utilizar transpondedores
-de calidad superior.
+incorporación al mercado\cite{roadmevolves}. En un principio, los 
+\emph{ROADM} debían realizar demultiplexación y multiplexación de
+todos los canales para poder manejar eficientemente las señales,
+además de varios otros inconvenientes. Esto elevaba notablemente el 
+costo de la red pues para minimizar las pérdidas en los nodos se 
+debían utilizar transpondedores de mejor calidad.
 
 Los \emph{ROADM} de segunda generación mejoraban en algo los problemas
-en la calidad de señal y permitían el switching de mayor calidad de
-longitudes de onda individuales utilizando una técnica llama ``Wave
-Blocking'' (\emph{WB}) o bloqueo de onda. El \emph{WB} solucionaba
-varios de los problemas que tenían los dispositivos \emph{ROADM} de
-primera generación, pero aún no eran lo suficientemente robustos,
-pequeños y útiles para ser utilizados a todo nivel, siendo las redes
-con \emph{ROADM} de segunda generación usualmente utilizadas solo a
-nivel de redes ``metro'' (redes metropolitanas).
+en la calidad de señal y permitían un switching de mayor calidad para
+longitudes de onda individuales utilizando ``Wave Blocking'' (\emph{WB})
+o bloqueo de onda. El \emph{WB} solucionaba varios de los problemas que
+tenían los dispositivos \emph{ROADM} de primera generación, pero aún no
+eran lo suficientemente robustos, pequeños y útiles para ser utilizados
+a todo nivel, siendo las redes con \emph{ROADM} de segunda generación 
+usualmente utilizadas sólo a nivel de redes metropolitanas.
 
 La tercera generación de \emph{ROADM} hace uso de unos módulos
-llamados \emph{WSS} (\emph{wave selective switch}). Esta
+llamados \emph{WSS} (\emph{wavelength selective switch}). Esta
 especificación introduce la capacidad de hacer redes totalmente
 flexibles, de forma dinámica y sin necesidad de tener a técnicos
-capacitados en la configuración de redes con \emph{OADM}
-fijos. Adicionalmente a la mejora tecnológica, los precios de los
+capacitados en la configuración de redes con \emph{OADM} fijos. 
+Adicionalmente a la mejora tecnológica, los precios de los
 dispositivos disminuyeron puesto al gran aumento de la oferta de
 soluciones \emph{DWDM} integrados con \emph{ROADM}.
 
@@ -130,8 +129,6 @@ Otra de las bondades que trajo la introducción de los \emph{WSS} fue
 haber incorporado la funcionalidad para interconectar redes de
 distintas topologías (redes en anillo y redes en malla, por
 ejemplo).
-
-% Fuente: http://www.infonetics.com/whitepapers/infonetics-roadm-evolves-white-paper-february-2006.pdf
 
 Las funcionalidades actuales de un \emph{ROADM} con \emph{WSS} son las
 siguientes:
@@ -148,27 +145,26 @@ siguientes:
 \subsubsection{Compensadores de atenuación}
 \label{sec:amplificadores}
 
-% Fuente: https://www.itu.int/rec/T-REC-G.663-200004-S/es
-
 Se utilizan amplificadores ópticos para evitar la excesiva atenuación
 de señal en el nodo de destino. Los amplificadores se clasifican según
-su ubicación en el enlace.
+su ubicación en el enlace\cite{G663}.
 
-El ``booster amplifier'' es un dispositivo que se inserta directamente
-después del transmisor óptico. Es especialmente útil en aplicaciones
-donde los \emph{OLA} o amplificadores intermedios no se pueden/quieren
-insertar por algún motivo de diseño (ejemplo: redes submarinas). El
-ruido que insertan es despreciable, pero una mayor potencia a su
-salida repercute en distorsiones no lineales de la fibra óptica. En
-ocasiones, los transmisores incluyen un ``booster amplifier''.
+El \textbf{booster amplifier} es un dispositivo que se inserta 
+directamente después del transmisor óptico. Es especialmente útil en
+aplicaciones donde los \emph{OLA} o amplificadores intermedios no se
+pueden y/o quieren insertar por algún motivo de diseño (e.g. redes 
+submarinas). El ruido que insertan es despreciable, pero una mayor 
+potencia a su salida repercute en distorsiones no lineales de la fibra
+óptica. En ocasiones, los transmisores incluyen uno de estos
+amplificadores.
 
-El preamplificador va en el receptor y sirve para mejorar la lectura
-de la señal por parte del dispositivo óptico de destino. En ocasiones,
-puede ir en el mismo módulo del receptor.
+El \textbf{preamplificador} va en el receptor y sirve para mejorar la
+lectura de la señal por parte del dispositivo óptico de destino. En 
+ocasiones, éste puede ir en el mismo módulo del receptor.
 
-Los \emph{OLA} o amplificadores de línea sirven para aumentar la
-potencia de forma de poder abarcar distancias de hasta miles de
-kilómetros. Demasiados \emph{OLA} pueden aumentar el efecto de la
+Los \emph{Optic Line Amplifiers} o amplificadores de línea sirven para
+aumentar la potencia de forma de poder abarcar distancias de hasta miles
+de kilómetros. Demasiados \emph{OLA} pueden aumentar el efecto de la
 dispersión cromática no lineal y, sobre todo, aumentar los niveles de
 ruido a niveles inmanejables, deteriorando demasiado el servicio de
 distribución.
