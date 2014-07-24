@@ -6,7 +6,7 @@ Agreement} o de Acuerdo de Nivel de Servicio. Este documento corresponde
 a un contrato entre el proveedor y un cliente para respaldar legalmente 
 que el servicio cumple ciertos estándares de calidad concretos, como 
 disponibilidad (\emph{uptime}), tiempo medio entre fallas (\emph{MTBF}),
-tiempo medio de reposición de servicio (\emph{MTTR}), etcétera.
+tiempo medio de reposición de servicio (\emph{MTTR}) y ancho de banda.
 
 El \emph{SLA} es, en este caso, algo que se debe determinar a partir de 
 las características del diseño del proyecto. Esto se debe a que existe 
@@ -17,7 +17,7 @@ Entre los diversos elementos que permite garantizar el \emph{SLA} de
 una red destacan:
 \begin{itemize}
 \item Servicios prestados
-\item Parámetros de QoS:
+\item Parámetros de calidad de servicio:
   \begin{itemize}
   \item Throughput
   \item Ancho de banda medio
@@ -131,15 +131,13 @@ quedan suspendidas hasta que los cables sean reparados físicamente
 (introduciendo el valor \emph{MTTR}). Ello repercute directamente
 en el \emph{SLA}, reduciendo el índice de interrupciones máximas.
 
-Afortunadamente, el desarrollo actual permite acceder a la tecnología 
-de conmutación dinámica de red ópticas de forma mucho más fácil
-que hace algunos años. Acceder hoy a arquitecturas basadas en
-\emph{WSON}, \emph{ROADM} y \emph{WSS} no aumenta significativamente el 
-\emph{CAPEX}, \emph{OPEX} o la complejidad del proyecto, pero sí afecta 
-sustancialmente al \emph{SLA}, introduciendo mejoras al índice de 
-interrupciones máximas al reducir considerablemente el \emph{MTBF}.
-
-Por otro lado, se pueden utilizar estimaciones de probabilidades de corte ...
+Afortunadamente, el uso de tecnologías como \emph{WSON}, \emph{ROADM}
+y \emph{WSS} permiten cambiar las rutas de acceso de forma dinámica e
+inmediata en caso de fallas. De esta forma, la probabilidad de cortes
+tiene una relación directa con la cantidad de rutas auxiliares disponibles
+que deben ser configuradas en los \emph{ROADM}. Es decir, si la
+probabilidad de corte aumenta, la cantidad de rutas adicionales y
+overhead en la red también aumentan.
 
 \subsection{Garantías en cuanto al ancho de banda y \emph{throughput}
   de la red óptica}
