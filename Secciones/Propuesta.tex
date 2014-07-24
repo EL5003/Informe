@@ -94,18 +94,11 @@ El CAPEX del proyecto es 10.
 \subsubsection{OPEX}
 \label{sec:opex}
 
-El OPEX del primer año de operación del proyecto funcionando se
-componen de los siguientes puntos:
+Los gastos de operación de un proyecto de telecomunicaciones consisten en los siguientes puntos que se considerarán para este proyecto específico:
 \begin{itemize}
-\item Gasto energético
-\item Gasto de mantenimiento
-  \begin{itemize}
-  \item Reparación de equipos
-  \item Reparación de cableado
-  \item Materiales de mantenimiento
-  \end{itemize}
-\item Gestión técnica (reconfiguraciones, evaluar agregar nuevos
-  equipos, etc)
+\item Horas hombre para operadores de la red
+\item Contratos de soporte
+\item Consumo de fuentes de poder
 \end{itemize}
 
 Los puntos anteriores se pueden estimar a precio de mercado. Esto es
@@ -113,19 +106,23 @@ lo que se hizo en la tabla \ref{tab:opex}.
 
 \begin{table}[H]
   \centering
-  \begin{tabular}{| c | c | c | c |}
-    \hline{}
-    Ítem & Precio unitario (por hora) & Unidades (horas) totales & Total USD \\
-    \hline{}
-    Gasto energético & 1.10 & 8760 & 9636 \\
-    \hline{}
-    Gasto mantenimiento equipos & 100 & 50 & 5000 \\
-    \hline{}
-    Gestión técnica & 50 & 48 & 2400 \\
-    \hline{}
-    Total & & & 17036 \\
+  \begin{tabular}{| l | c | c | r |}
+    \hline
+    \textbf{Ítem} & \textbf{Precio x 1 (USD por unidad)} & \textbf{Unidades x año} & \textbf{Total USD} \\
+    \hline
+    Horas h. operadores & 30 & 720 & 21.600 \\
+    \hline
+    Contratos de soporte (u.) & 500.000 & 1 & 500.000 \\
+    \hline
+    Consumo de potencia (KWh) & 1.10 & 26.280\footnote{Este valor corresponde a 500 W por todos los equipos en un datacenter, por horas en un año.} & 28.908 \\
+    \hline
+    Total & & & $\approx \$550.000$ USD \\
     \hline
   \end{tabular}
   \caption{Detalle OPEX de un año tipo (válido para el primer año)}
   \label{tab:opex}
 \end{table}
+
+El valor calculado de \emph{OPEX} tiene proporciones de
+aproximadamente 4\%, 91\% y 5\% entre sueldo de operadores, contratos
+de soporte y gasto energético, respectivamente.
