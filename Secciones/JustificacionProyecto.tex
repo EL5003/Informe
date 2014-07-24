@@ -38,7 +38,8 @@ misma configuración de protocolos en una red \emph{DWDM}, el cable
 óptico permite el transporte de 80 veces este valor, es decir, cerca
 de 768 TB/s, lo que representa una disminución de costo de instalación
 de tendido. Para poder alcanzar este ancho de banda de hubiera
-necesitado instalar 80 cables de fibra óptica de 399 Km. de largo.
+necesitado instalar 80 cables de fibra óptica adicionales en cada uno
+de los tramos que en total suman 399 Km.
 
 El análisis anterior supone que los tendidos ya se encuentran
 empalmados y operando correctamente con cada uno de los servicios
@@ -53,38 +54,35 @@ A continuación se muestra una simulación de los costos de romper el
 tiene asociado contratos que suman USD
 \$1.000.000\footnote{Aproximación burda; es probable que el orden de
   magnitud de este valor haya sido subestimado.} en ingresos anuales
-para Entel, por decir una cifra, la ruptura de un cable significaría
-perder alrededor de USD \$30.000.000 de ingresos anuales en el caso
-que las empresas involucradas renuncien al caerse el servicio.
+para Entel, la ruptura de un cable significaría perder alrededor de 
+USD \$30.000.000 de ingresos anuales en el caso que las empresas 
+involucradas renuncien al caerse el servicio.
 
 Una fibra activa con sistemas \emph{WSS} y \emph{WSON} para
-restablecer las rutas automáticamente significarían un costo como el
-mencionado en la sección \ref{sec:capex} de una sola vez, pero el
+restablecer las rutas automáticamente significarían un costo inicial 
+como el mencionado en la sección \ref{sec:capex}, pero el
 costo de romper contratos por \emph{SLA} se ahorraría.
 
 Un análisis cuantitativo menos dramático tiene que ver con el costo de
 la mantención de los equipos. Mantener equipos de fibra oscura
 requeriría recurrentemente empalmar fibras, tender nuevos cables e
-instalar mayor cantidad de \emph{ODF}. Ello elevaría el costo por mano
+instalar mayor cantidad de \emph{ODFs}. Ello elevaría el costo por mano
 de obra pues las obras durarían mucho más. Además, la cantidad de
-conexiones que se crearían sería insospechadamente peligroso de
-manipular, haciendo que la probabilidad de cometer errores que
-terminen afectando el \emph{SLA} de los clientes aumente
-considerablemente.
+conexiones que se crearían sería difícil de predecir, haciendo que la 
+probabilidad de cometer errores que terminen afectando el \emph{SLA} 
+de los clientes aumente considerablemente.
 
 Los puntos cuantitativos negativos de instalar un sistema \emph{DWDM}
 que reemplace al tendido de fibra oscura se pueden observar desde el
 punto de vista técnico. Equipos más complejos requerirán mano de obra
 especializada y aumento en costo de energía. Sin embargo, estos costos
-como se pudieron observar en las secciones \ref{sec:capex} y
-\ref{sec:opex} son marginales con respecto al riesgo de afectar al
-\emph{SLA}.
+(ver secciones \ref{sec:capex} y \ref{sec:opex}) son marginales con 
+respecto al riesgo de afectar al \emph{SLA}.
 
-En síntesis, no hay punto de comparación desde el punto de vista
-cuantitativo. Los riesgos que se toman al violar el \emph{SLA} de los
-clientes es mayor a virtualmente cualquier inversión que se pueda
-realizar. Por ello, conviene prácticamente siempre invertir en
-``iluminar'' una red de fibra óptica.
+En síntesis, la comparación es claramente favorable para una red 
+iluminada, pues los riesgos que se toman al violar el \emph{SLA} de los
+clientes es mayor a cualquier inversión que se pueda realizar. Por ello, 
+se recomienda invertir en \emph{iluminar} la red de fibra óptica.
 
 \subsection{Aspectos cualitativos}
 \label{sec:cualitativos}
@@ -101,9 +99,9 @@ aumentan.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=10cm]{Imagenes/aumento_bw.png}
+  \includegraphics[width=0.75\textwidth]{Imagenes/iptrafficchart.png}
   \caption{Tendencia en el aumento del ancho de banda a nivel mundial
-    según un estudio de Cisco de 2013.}
+    según un estudio de Cisco de 2014.\cite{ciscoiptraffic}}
   \label{fig:aumento_bw}
 \end{figure}
 
@@ -134,20 +132,21 @@ data centers en el mundo son los que se muestran en la figura
   \label{fig:servicios}
 \end{figure}
 
-Los servicios mostrados en la figura \ref{fig:servicios} son solo los
-más famosos en la Web a la fecha. Hay servicios, como los realizados
-por observatorios y grupos científicos, que requieren del orden de
-petabytes de información al día. Estos volúmenes de información solo
-pueden ser manejados en la actualidad por data centers. Sin embargo,
-el transporte de estos datos es uno de los cuellos de botella más
-críticos del sistema de almacenamiento de información, y en general de
-las nuevas tecnologías en el mundo.
+Los servicios mostrados en la figura \ref{fig:servicios} son algunos
+de los más famosos en la Web a la fecha. Por otro lado, existen 
+ambientes de alto tráfico en el ámbito de los observatorios espaciales
+y grupos científicos, que deben manejar del orden de petabytes de
+información por día. Estos volúmenes de información sólo pueden ser
+manejados en la actualidad por data centers. Sin embargo, el
+transporte de estos datos es uno de los cuellos de botella más
+críticos del sistema de almacenamiento de información y de las nuevas
+tecnologías en el mundo en general.
 
-Es por ello que se espera que siga aumentando el flujo de
-información. Ello requiere de redes que se puedan instalar
-rápidamente, sin realizar inversiones demasiado grandes y que tengan
-la posibilidad de escalar en el tiempo. \emph{DWDM} permite esto, a
-diferencia de la fibra oscura.
+Este aumento en el flujo de información requiere de redes que se puedan
+instalar rápidamente, sin realizar inversiones demasiado grandes y que
+tengan la posibilidad de escalar fácilmente en el tiempo. En este
+sentido, el argumento nuevamente favorece migrar a \emph{DWDM} en vez
+de mantener la fibra oscura. 
 
 En definitiva, los avances, la estandarización y la disminución de
 precios que han experimentado este tipo de tecnologías son los
