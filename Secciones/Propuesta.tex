@@ -71,8 +71,7 @@ tabla \ref{tab:propfinal}.
     Equipo & Cantidad \\
     \hline
     WSS MUX & 32 \\
-    WSS DEMUX & 32 \\
-    EDFA & 72 \\
+    EDFA & 52 \\
     MUX & 12 \\
     DEMUX & 12 \\
     ODF & 18 \\
@@ -89,7 +88,44 @@ tabla \ref{tab:propfinal}.
 \subsubsection{CAPEX}
 \label{sec:capex}
 
-El CAPEX del proyecto es 10.
+El CAPEX del proyecto considera todos los insumos necesarios en los que se requiere invertir para poner el proyecto en marcha. Dentro de los nombrados en la sección \ref{sec:planificacion} y \ref{sec:ingdetalle} los equipos más importantes corresponden a las tarjetas WSS y a los transpondedores los cuales abarcan cerca del 80\% del total de la inversión. Los demás suministros necesarios corresponden a equipos Mux/Demux, ODF, jumpers, aparatos EDFA, y otros.
+
+Para calcular el precio total de la inversión se considero una propuesta obtenida del proveedor \newline Ericsson$^\circledR$, dentro de su línea de productos MHL3000, la que corresponde a equipos necesarios para montar una red DWDM convencional.
+
+El monto total de la inversión asciende a 4.253.320 \$USD. El detalle del CAPEX se encuentra en la tabla \ref{tab:capex}.
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{| l | c | c | r |}
+    \hline
+    \textbf{Ítem} & \textbf{Precio Unit. (USD)} & \textbf{Unidades} & \textbf{Total USD} \\
+    \hline
+    WSS (Mux) & 22.000 & 32 & 704.000\\
+    \hline
+   Mux  & 5.000 & 12 & 60.000 \\
+    \hline
+    Demux & 5.000 & 12 & 60.000 \\
+    \hline
+    Transpondedores  & 10.000 & 296 & 2.960.000 \\
+    \hline
+    Jumpers  & 10 & 132 & 1.320 \\
+    \hline
+    Kit para cables & 500 & 6 & 3.000 \\
+    \hline
+    Racks  & 2.500 & 12 & 30.000 \\
+    \hline
+    Pre-Amp & 7.500 & 26 & 195.000\\
+    \hline
+    Boosters & 7.500 & 26 & 195.000\\
+    \hline
+    ODF & 2.500 & 18 & 45.000\\
+    \hline    
+    Total & & & $\approx \$4.253.320$ USD \\
+    \hline
+  \end{tabular}
+  \caption{Detalle CAPEX del proyecto}
+  \label{tab:capex}
+\end{table}
 
 \subsubsection{OPEX}
 \label{sec:opex}
