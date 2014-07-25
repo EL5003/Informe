@@ -34,16 +34,16 @@ los cables.
 
 \subsection{Modelo Probabilístico de la red}
 
-La red de fibra oscura actual se compone de 6 data centers ubicados 
-en la ciudad de Santiago y sus alrededores. La red posee cables de 
-fibra oscura G.652.D que permiten el uso de 96 fibras ópticas en cada 
-uno. Este tipo de fibra presenta una tasa de cortes anual de $0.05 
-[\frac{\text{cortes}/\text{año}}{\text{km}}]$ en zona metropolitana y 
-$0.01 [\frac{\text{cortes}/\text{año}}{\text{km}}]$ en zona rural. 
-Debido a esto, es se espera que cada cierto tiempo, el camino que 
-utilizaba la red para conectar un par de data centers esté 
-inhabilitado y se requieran rutas alternativas con el fin de mantener 
-un estándar de calidad en disponibilidad de conexión en la red.
+La red de fibra oscura actual se compone de 6 data centers ubicados en
+la ciudad de Santiago y sus alrededores. La red posee cables de fibra
+oscura G.652.D que permiten el uso de 96 fibras ópticas en cada
+uno. Este tipo de fibra presenta una tasa de cortes anual de $0.05
+[\frac{\text{cortes}/\text{año}}{\text{km}}]$ en zona metropolitana y
+$0.01 [\frac{\text{cortes}/\text{año}}{\text{km}}]$ en zona rural.
+Debido a esto, es se espera que cada cierto tiempo, el camino que
+utilizaba la red para conectar un par de \emph{DC} esté inhabilitado y
+se requieran rutas alternativas con el fin de mantener un estándar de
+calidad en disponibilidad de conexión en la red.
 
 Se define la probabilidad de que una conexión física (cable de fibra 
 óptica G.652.D) entre 2 \emph{datacenters} separados por una distancia 
@@ -76,7 +76,7 @@ camino \eqref{proba_corte_3}.
 
 \begin{equation}
 \label{proba_corte_3}
-P(\text{indisponibilidad entre data centers A y B en }\Delta T) =  \prod_{j \in \text{Caminos}}\left( \frac{\Delta T}{365}\right) \max_{i \in \text{Conex. del Camino}} {L_{i,j} R_{i,j} }
+P(\text{indisponibilidad entre \emph{DC} A y B en }\Delta T) =  \prod_{j \in \text{Caminos}}\left( \frac{\Delta T}{365}\right) \max_{i \in \text{Conex. del Camino}} {L_{i,j} R_{i,j} }
 \end{equation}
 
 Dado que la tasa de cortes depende del tipo de zona en el que está 
@@ -126,10 +126,10 @@ Los resultados obtenidos por el algoritmo se muestran en la figura
 \label{sec:cortes}
 
 En una infraestructura de red oscura, un corte de cable entre dos data
-centers significa que todas las conexiones entre esos data centers
-quedan suspendidas hasta que los cables sean reparados físicamente
-(introduciendo el valor \emph{MTTR}). Ello repercute directamente
-en el \emph{SLA}, reduciendo el índice de interrupciones máximas.
+centers significa que todas las conexiones entre esos \emph{DC} quedan
+suspendidas hasta que los cables sean reparados físicamente
+(introduciendo el valor \emph{MTTR}). Ello repercute directamente en
+el \emph{SLA}, reduciendo el índice de interrupciones máximas.
 
 Afortunadamente, el uso de tecnologías como \emph{WSON}, \emph{ROADM}
 y \emph{WSS} permiten cambiar las rutas de acceso de forma dinámica e
@@ -170,7 +170,7 @@ transmisión se muestran en las tablas \ref{tab:10ge} y \ref{tab:FC4G}.
     \textbf{LCD}  &   &   &   &   &   & - \\
     \hline
   \end{tabular}
-  \caption{Número de servicios entre data centers para protocolo 10GE}
+  \caption{Número de servicios entre \emph{DC} para protocolo 10GE}
   \label{tab:10ge}
 \end{table}
 
@@ -193,7 +193,7 @@ transmisión se muestran en las tablas \ref{tab:10ge} y \ref{tab:FC4G}.
      \textbf{LCD}  &   &   &   &   &   & - \\
      \hline
    \end{tabular}
-   \caption{Número de servicios entre data centers para protocolo Fiber Channel 4G}
+   \caption{Número de servicios entre \emph{DC} para protocolo Fiber Channel 4G}
    \label{tab:FC4G}
  \end{table}
 
